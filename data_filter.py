@@ -77,8 +77,11 @@ DATA = [
 
 def run():
     all_python_devs = [worker["name"] for worker in DATA if worker["language"] == "python"]
-    for worker in all_python_devs:
+    all_platzi_workers = [worker["name"] for worker in DATA if worker["organization"]== "Platzi"]
+    for worker in all_platzi_workers:
         print(worker)
+
+
 
 
 
